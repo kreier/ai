@@ -1,0 +1,100 @@
+{
+  "site": {
+    "title": "AI Explorer",
+    "subtitle": "Interactive Guide to Artificial Intelligence, Transformers & Hardware",
+    "tagline": "From Perceptrons and p5.js to Modern LLMs, Mixture of Experts, and Edge Hardware Realities",
+    "badge": "Bilingual Interactive Learning",
+    "github": "GitHub",
+    "soundClassifierLink": "Sound Classifier Demo",
+    "footerText": "Created for open AI education. Built with Vite, TypeScript & Tailwind CSS."
+  },
+  "nav": {
+    "home": "Overview",
+    "foundations": "1. Foundations",
+    "training": "2. Training & Inference",
+    "transformer": "3. Transformers",
+    "frontier": "4. Modern LLMs",
+    "hardware": "5. Hardware & Edge AI",
+    "lab": "🧪 Interactive Lab"
+  },
+  "hero": {
+    "title": "Demystifying Artificial Intelligence",
+    "description": "An interactive, visual curriculum designed to teach how AI actually works: from neurons and weights to self-attention matrices, memory bandwidth limits, and real-world edge hardware.",
+    "exploreModules": "Explore Modules",
+    "tryLab": "Open Interactive Lab",
+    "existingDemoBadge": "Includes ml5.js 6-Tone Sound Classifier"
+  },
+  "modules": {
+    "foundations": {
+      "title": "What is AI, ML, DL, CNN, and RNN?",
+      "shortDesc": "Understand the hierarchy of artificial intelligence, machine learning, deep learning, and classic architectures.",
+      "aiDef": "Artificial Intelligence (AI) is the broad umbrella concept of machines performing tasks that typically require human cognition (reasoning, perception, language, planning).",
+      "mlDef": "Machine Learning (ML) is a subset of AI where systems learn patterns from empirical data rather than relying on explicit hand-crafted rules.",
+      "dlDef": "Deep Learning (DL) is a subset of ML utilizing artificial neural networks with multiple stacked layers (deep representations) to extract hierarchical features.",
+      "nnDef": "A Neural Network is composed of interconnected nodes (neurons) organized into layers. Each connection has an adjustable numerical weight.",
+      "rnnDef": "Recurrent Neural Networks (RNN) process sequential data (audio, time-series, text) with an internal hidden loop that passes memory from step to step, but suffers from vanishing gradients on long contexts.",
+      "cnnDef": "Convolutional Neural Networks (CNN) apply sliding filter kernels across grid inputs (like images) to detect spatial features (edges, textures, shapes), invariant to position."
+    },
+    "training": {
+      "title": "How Training & Inference Work",
+      "shortDesc": "Discover how neural networks learn via the forward pass, loss computation, backpropagation, and how inference generates answers.",
+      "forwardPass": "Forward Pass: Inputs flow layer-by-layer through weighted sums and non-linear activation functions (ReLU, GELU, Sigmoid) to produce an output prediction.",
+      "lossFunction": "Loss Function: Quantifies how wrong the prediction is compared to ground truth (e.g., Mean Squared Error for regression, Cross-Entropy for classification).",
+      "backpropagation": "Backpropagation: Calculates the gradient of the loss with respect to every weight using Calculus (the Chain Rule), flowing backwards from output to input.",
+      "optimization": "Optimization (Gradient Descent & AdamW): Updates weights in the opposite direction of the gradient to minimize the loss over epochs.",
+      "inference": "Inference: The weights are frozen. New unseen inputs are evaluated in a single forward pass. In LLMs, temperature and top-p sampling control the randomness of next-token generation."
+    },
+    "transformer": {
+      "title": "What Makes the Transformer Special?",
+      "shortDesc": "Why the 2017 'Attention Is All You Need' architecture revolutionized AI and replaced RNNs completely.",
+      "parallelization": "Massive Parallelism: Unlike RNNs that must process token-by-token sequentially, Transformers process entire sequences simultaneously during training, unlocking massive GPU scaling.",
+      "selfAttention": "Self-Attention Mechanism: Allows every token in a sentence to attend to every other token, calculating contextual relevance dynamically.",
+      "qkv": "Query, Key, and Value: Inspired by information retrieval. A token's Query (what it looks for) is compared via dot-product with every other token's Key (what it contains), scaled by sqrt(d_k), passed through Softmax to produce weights, and multiplied by the Values.",
+      "positionalEncoding": "Positional Encoding: Since attention is permutation-invariant, positional encodings (sinusoids or modern Rotary Position Embeddings / RoPE) inject sequence order into the vectors."
+    },
+    "frontier": {
+      "title": "MoE, FlashAttention, Tokens & Emergent Abilities",
+      "shortDesc": "Explore cutting-edge frontier LLM concepts, tokens, tensors, sparse routing, and memory optimization.",
+      "tokens": "Tokens: LLMs do not read letters or whole words. They split text into subword chunks called tokens (e.g., Byte-Pair Encoding). 1,000 English words typically equate to ~1,300 tokens.",
+      "tensors": "Vectors, Matrices & Tensors: A scalar is 0D, a vector is 1D (token embedding), a matrix is 2D (layer weights), and a tensor is an N-dimensional array holding batches of sequences.",
+      "moe": "Mixture of Experts (MoE): Instead of activating all parameters for every token, a gating network selectively routes each token to top-K expert networks (e.g., activating only 2 out of 8 experts), slashing compute costs while preserving capacity.",
+      "flashAttention": "FlashAttention: An exact, hardware-aware attention algorithm that tiles computation across fast on-chip GPU SRAM, avoiding slow High Bandwidth Memory (HBM) read/writes.",
+      "emergentAbilities": "Emergent Abilities: Qualitative jumps in capability (multi-step reasoning, coding, theory of mind) that appear as models scale across compute, parameters, and dataset tokens."
+    },
+    "hardware": {
+      "title": "Hardware Bottlenecks, Edge AI & Quantization",
+      "shortDesc": "Can your phone or PC run AI? The critical distinction between compute (FLOPs) and memory bandwidth (GB/s).",
+      "canWeRun": "Can we run AI locally? Yes! Small efficient LLMs (1B to 8B parameters) run today on modern laptops and smartphones via local inference engines (Ollama, llama.cpp, WebLLM, ONNX Runtime).",
+      "twinBottlenecks": "Prefill vs. Generation Bottleneck: Processing your prompt (prefill) is compute-bound (TFLOPs), fully utilizing matrix cores. But outputting text token-by-token is memory-bandwidth bound (GB/s) — the system must read gigabytes of model weights from memory for every single token!",
+      "bandwidthFormula": "Generation Speed Formula: Max Tokens/sec = Memory Bandwidth (GB/s) ÷ Model Memory Size (GB). If an 8B model takes 4.5 GB and your laptop has 90 GB/s bandwidth, max speed is ~20 tokens/sec.",
+      "quantizationIntro": "Quantization compresses high-precision floating point numbers into fewer bits, slashing memory footprint and bandwidth requirements with minimal loss in reasoning quality.",
+      "formats": {
+        "fp32": "FP32 (32-bit): 4 bytes/param. Full single precision, primarily used in research and master training weights.",
+        "fp16": "FP16 / BF16 (16-bit): 2 bytes/param. Standard format for modern deep learning training and baseline weights.",
+        "fp8": "FP8 (8-bit): 1 byte/param. Native to Nvidia Hopper H100 and Blackwell GPUs, halving memory bandwidth demands.",
+        "int8": "INT8 (8-bit integer): 1 byte/param. Popular quantization standard for high accuracy with 50% memory savings.",
+        "int4": "INT4 (4-bit integer, GGUF/AWQ): 0.5 bytes/param. Enables 7B models to fit in under 4 GB VRAM for laptops and phones.",
+        "nvfp4": "NVFP4 (4-bit microscopic float): Nvidia Blackwell architecture format offering extreme speedup with 2x throughput over FP8."
+      }
+    },
+    "lab": {
+      "title": "Interactive Lab & Experiments",
+      "shortDesc": "Hands-on calculators, tokenizers, and the existing p5.js 6-tone neural network classifier.",
+      "soundClassifierTitle": "🎵 6-Tone Sound Classifier (p5.js + ml5.js)",
+      "soundClassifierDesc": "Our included machine learning experiment: trains a neural network with 1 hidden layer and 16 nodes to map a 400x400 2D coordinate grid to 6 distinct audio tones.",
+      "launchSoundClassifier": "Launch Fullscreen Classifier",
+      "embeddedFrame": "Embedded Live Sandbox",
+      "calculatorTitle": "⚡ LLM Hardware & Speed Calculator",
+      "calcDescription": "Calculate whether a model fits in your VRAM and estimate token generation speed based on your memory bandwidth."
+    }
+  },
+  "calc": {
+    "modelSize": "Model Size (Parameters)",
+    "precision": "Weight Precision",
+    "bandwidth": "Hardware Memory Bandwidth",
+    "calcButton": "Calculate Requirements",
+    "vramRequired": "Estimated Model VRAM:",
+    "tokenSpeed": "Theoretical Generation Speed:",
+    "fitCheck": "Edge Device Suitability:"
+  }
+}

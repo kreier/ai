@@ -1,0 +1,100 @@
+{
+  "site": {
+    "title": "AI Explorer",
+    "subtitle": "Cẩm Nang Tương Tác Về Trí Tuệ Nhân Tạo, Transformer & Phần Cứng",
+    "tagline": "Từ Nơ-ron cơ bản và p5.js đến Mô hình Ngôn ngữ Lớn (LLM), MoE và Giới hạn Phần cứng Biên",
+    "badge": "Học Tập Tương Tác Song Ngữ",
+    "github": "GitHub",
+    "soundClassifierLink": "Thử nghiệm Nhận Diện Âm Thanh",
+    "footerText": "Dự án giáo dục AI mã nguồn mở. Xây dựng với Vite, TypeScript & Tailwind CSS."
+  },
+  "nav": {
+    "home": "Tổng quan",
+    "foundations": "1. Nền tảng AI",
+    "training": "2. Huấn luyện & Suy luận",
+    "transformer": "3. Mô hình Transformer",
+    "frontier": "4. LLM Hiện Đại",
+    "hardware": "5. Phần cứng & Edge AI",
+    "lab": "🧪 Phòng Thí Nghiệm"
+  },
+  "hero": {
+    "title": "Giải Mã Bản Chất Trí Tuệ Nhân Tạo",
+    "description": "Chương trình học tập tương tác trực quan giúp bạn hiểu sâu cách AI thực sự vận hành: từ nơ-ron và trọng số đến ma trận Self-Attention, nút thắt băng thông bộ nhớ và khả năng chạy AI trên điện thoại/laptop.",
+    "exploreModules": "Khám Phá Các Chương",
+    "tryLab": "Mở Phòng Thí Nghiệm",
+    "existingDemoBadge": "Bao gồm Dự án ml5.js Phân Loại 6 Âm Thanh"
+  },
+  "modules": {
+    "foundations": {
+      "title": "AI, ML, Học Sâu (DL), CNN và RNN là gì?",
+      "shortDesc": "Hiểu rõ hệ thống phân cấp của trí tuệ nhân tạo, học máy, học sâu và các kiến trúc mạng kinh điển.",
+      "aiDef": "Trí tuệ nhân tạo (AI) là khái niệm bao trùm về việc máy móc có khả năng thực hiện các nhiệm vụ đòi hỏi trí thông minh của con người (suy luận, thị giác, ngôn ngữ, lập kế hoạch).",
+      "mlDef": "Học máy (Machine Learning - ML) là tập con của AI, nơi hệ thống tự học các quy luật từ dữ liệu thực tế thay vì dựa vào các quy tắc lập trình cứng nhắc.",
+      "dlDef": "Học sâu (Deep Learning - DL) là nhánh con của ML sử dụng các mạng nơ-ron nhân tạo nhiều tầng (tầng sâu) để tự động trích xuất các đặc trưng phân cấp phức tạp.",
+      "nnDef": "Mạng nơ-ron (Neural Network) cấu thành từ các nơ-ron liên kết với nhau theo các tầng. Mỗi liên kết mang một trọng số (weight) có thể tinh chỉnh được.",
+      "rnnDef": "Mạng nơ-ron hồi quy (RNN) xử lý dữ liệu chuỗi (âm thanh, chuỗi thời gian, văn bản) nhờ vòng lặp ẩn lưu giữ ký ức qua từng bước, nhưng gặp hạn chế triệt tiêu đạo hàm khi chuỗi quá dài.",
+      "cnnDef": "Mạng nơ-ron tích chập (CNN) sử dụng các bộ lọc (kernel) trượt trên ma trận dữ liệu (như hình ảnh) để nhận diện đặc trưng không gian (cạnh, đường viền, hình khối) bất kể vị trí."
+    },
+    "training": {
+      "title": "Quá Trình Huấn Luyện & Suy Luận Diễn Ra Thế Nào?",
+      "shortDesc": "Tìm hiểu cách mạng nơ-ron học thông qua lan truyền tiến, hàm mất mát, lan truyền ngược và cách mô hình suy luận đưa ra câu trả lời.",
+      "forwardPass": "Lan truyền tiến (Forward Pass): Dữ liệu đầu vào đi qua từng tầng nơ-ron qua phép nhân trọng số và hàm kích hoạt phi tuyến tính (ReLU, GELU, Sigmoid) để tạo ra dự đoán đầu ra.",
+      "lossFunction": "Hàm mất mát (Loss Function): Đo lường mức độ sai lệch giữa dự đoán của mô hình và kết quả thực tế (ví dụ: MSE cho bài toán hồi quy, Cross-Entropy cho bài toán phân loại).",
+      "backpropagation": "Lan truyền ngược (Backpropagation): Tính toán đạo hàm (gradient) của hàm mất mát đối với từng trọng số bằng giải tích (Quy tắc chuỗi - Chain Rule), lan ngược từ đầu ra về đầu vào.",
+      "optimization": "Tối ưu hóa (Gradient Descent & AdamW): Cập nhật các trọng số theo hướng ngược lại của đạo hàm để giảm thiểu hàm mất mát qua từng chu kỳ huấn luyện (epochs).",
+      "inference": "Suy luận (Inference): Các trọng số đã được đóng băng cố định. Đầu vào mới được tính toán chỉ qua một lần lan truyền tiến. Với LLM, các tham số temperature và top-p điều khiển tính ngẫu nhiên khi sinh từ."
+    },
+    "transformer": {
+      "title": "Điều Gì Khiến Mô Hình Transformer Trở Nên Đặc Biệt?",
+      "shortDesc": "Lý do kiến trúc 'Attention Is All You Need' năm 2017 tạo nên cuộc cách mạng bùng nổ AI và thay thế hoàn toàn mạng RNN.",
+      "parallelization": "Khả năng xử lý song song cực lớn: Khác với RNN phải đọc từng từ tuần tự, Transformer xử lý toàn bộ chuỗi văn bản cùng một lúc trong quá trình huấn luyện, tận dụng tối đa sức mạnh tính toán song song của GPU.",
+      "selfAttention": "Cơ chế tự tập trung (Self-Attention): Cho phép mọi từ trong câu liên kết và đo lường mức độ liên quan ngữ cảnh với mọi từ khác một cách linh hoạt.",
+      "qkv": "Query, Key và Value: Lấy cảm hứng từ hệ thống tìm kiếm thông tin. Query của một từ (thông tin cần tìm) được nhân tích vô hướng với Key của các từ khác (nhãn nội dung), chuẩn hóa qua căn bậc hai d_k, qua hàm Softmax và nhân với Value để tổng hợp ý nghĩa.",
+      "positionalEncoding": "Mã hóa vị trí (Positional Encoding): Do phép tính attention không phân biệt thứ tự trước sau, vector mã hóa vị trí (hàm sin/cos hoặc RoPE hiện đại) được cộng hoặc xoay để giữ đúng trật tự câu từ."
+    },
+    "frontier": {
+      "title": "MoE, FlashAttention, Token & Khả Năng Mới Xuất Hiện",
+      "shortDesc": "Khám phá các khái niệm tiên phong của LLM: cấu trúc token, ten-xơ, kiến trúc chuyên gia thưa thớt và tối ưu hóa bộ nhớ.",
+      "tokens": "Token: LLM không đọc trực tiếp chữ cái hay nguyên từ. Chúng phân tách văn bản thành các mẩu ký tự phụ gọi là token (thuật toán BPE). 1.000 từ tiếng Anh tương đương ~1.300 token; tiếng Việt có dấu cần nhiều token hơn.",
+      "tensors": "Vectơ, Ma trận & Ten-xơ: Số vô hướng là 0 chiều, vectơ là 1 chiều (nhúng token), ma trận là 2 chiều (trọng số một tầng), và ten-xơ là mảng đa chiều chứa nhiều lô chuỗi văn bản cùng lúc.",
+      "moe": "Mô hình hỗn hợp chuyên gia (MoE): Thay vì kích hoạt toàn bộ hàng trăm tỷ tham số cho mỗi từ, mạng định tuyến sẽ gửi token đến đúng 2-4 mạng chuyên gia phù hợp nhất, giảm mạnh chi phí tính toán.",
+      "flashAttention": "FlashAttention: Thuật toán attention thông minh tối ưu hóa theo phần cứng, chia khối tính toán trực tiếp trên bộ nhớ SRAM siêu nhanh của GPU, tránh nghẽn khi đọc/ghi bộ nhớ HBM.",
+      "emergentAbilities": "Khả năng tự xuất hiện (Emergent Abilities): Những năng lực nhảy vọt (suy luận nhiều bước, lập trình, lý thuyết tâm trí) bất ngờ xuất hiện khi quy mô tham số và lượng dữ liệu vượt qua một ngưỡng tới hạn."
+    },
+    "hardware": {
+      "title": "Nút Thắt Phần Cứng, Edge AI & Lượng Tử Hóa (Quantization)",
+      "shortDesc": "Điện thoại hay máy tính của bạn có chạy được AI không? Bản chất khác biệt giữa năng lực tính toán (FLOPs) và băng thông bộ nhớ (GB/s).",
+      "canWeRun": "Chúng ta có thể chạy AI trực tiếp trên máy cá nhân không? Hoàn toàn có thể! Các mô hình nhỏ gọn (1B đến 8B tham số) hiện nay chạy mượt mà trên laptop và smartphone nhờ các bộ suy luận cục bộ như Ollama, llama.cpp, WebLLM.",
+      "twinBottlenecks": "Nút thắt Prefill vs. Generation: Khi đọc câu hỏi đầu vào (prefill), GPU bận rộn tính toán ma trận (Compute-bound - đo bằng TFLOPs). Nhưng khi sinh từng từ đầu ra (generation), hệ thống bị nghẽn băng thông bộ nhớ (Memory Bandwidth-bound - GB/s) vì phải nạp lại toàn bộ dung lượng mô hình cho mỗi một token sinh ra!",
+      "bandwidthFormula": "Công thức tốc độ sinh từ: Tốc độ tối đa (Tokens/giây) = Băng thông bộ nhớ (GB/s) ÷ Dung lượng mô hình (GB). Nếu mô hình 8B chiếm 4.5 GB và laptop có băng thông 90 GB/s, tốc độ lý thuyết là ~20 token/giây.",
+      "quantizationIntro": "Lượng tử hóa (Quantization) nén các số thực dấu phẩy động độ chính xác cao thành số ít bit hơn, giảm mạnh dung lượng RAM và băng thông cần thiết mà hầu như không suy giảm chất lượng suy luận.",
+      "formats": {
+        "fp32": "FP32 (32-bit): 4 byte/tham số. Độ chính xác đơn đầy đủ, chủ yếu dùng trong nghiên cứu và lưu trọng số gốc khi huấn luyện.",
+        "fp16": "FP16 / BF16 (16-bit): 2 byte/tham số. Tiêu chuẩn hiện đại phổ biến nhất cho huấn luyện và chạy mô hình gốc.",
+        "fp8": "FP8 (8-bit): 1 byte/tham số. Được hỗ trợ trên GPU Nvidia Hopper H100 và Blackwell, giảm một nửa nhu cầu băng thông.",
+        "int8": "INT8 (Số nguyên 8-bit): 1 byte/tham số. Chuẩn lượng tử hóa phổ biến giúp tiết kiệm 50% RAM mà vẫn giữ độ chính xác cao.",
+        "int4": "INT4 (Số nguyên 4-bit, GGUF/AWQ): 0.5 byte/tham số. Giúp mô hình 7B vừa vặn trong chưa đầy 4 GB VRAM trên laptop và điện thoại.",
+        "nvfp4": "NVFP4 (Số thực 4-bit vi mô): Định dạng trên kiến trúc Nvidia Blackwell mang lại thông lượng xử lý tăng gấp đôi so với FP8."
+      }
+    },
+    "lab": {
+      "title": "Phòng Thí Nghiệm & Thử Nghiệm Tương Tác",
+      "shortDesc": "Các công cụ tính toán trực tiếp, mô phỏng token và thử nghiệm mạng nơ-ron phân loại 6 âm thanh p5.js có sẵn.",
+      "soundClassifierTitle": "🎵 Mô Hình Phân Loại 6 Âm Thanh (p5.js + ml5.js)",
+      "soundClassifierDesc": "Thử nghiệm học máy có sẵn trong dự án: huấn luyện mạng nơ-ron với 1 tầng ẩn gồm 16 nơ-ron để ánh xạ tọa độ lưới 400x400 thành 6 nốt âm thanh đặc trưng.",
+      "launchSoundClassifier": "Mở Bản Toàn Màn Hình",
+      "embeddedFrame": "Khung Thử Nghiệm Trực Tiếp",
+      "calculatorTitle": "⚡ Công Cụ Ước Tính Phần Cứng & Tốc Độ LLM",
+      "calcDescription": "Tính toán dung lượng VRAM cần thiết và tốc độ sinh token lý thuyết dựa trên thông số mô hình và băng thông phần cứng của bạn."
+    }
+  },
+  "calc": {
+    "modelSize": "Kích thước mô hình (Số tỷ tham số)",
+    "precision": "Độ chính xác trọng số",
+    "bandwidth": "Băng thông bộ nhớ phần cứng",
+    "calcButton": "Tính Toán Yêu Cầu",
+    "vramRequired": "VRAM Dự Kiến Cần Có:",
+    "tokenSpeed": "Tốc Độ Sinh Từ Lý Thuyết:",
+    "fitCheck": "Khả Năng Chạy Trên Thiết Bị:"
+  }
+}
