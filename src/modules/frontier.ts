@@ -87,23 +87,23 @@ export function renderFrontierPage(): HTMLElement {
     <!-- AI Timeline -->
     <div class="p-6 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 mb-10">
       <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-4">
-        📅 ${isVi ? 'Dòng Thời Gian Tiến Hóa AI Hiện Đại' : 'Modern AI Evolution Timeline'}
+        📅 ${t('modules.frontier.timelineTitle')}
       </h3>
       <div class="border-l-2 border-indigo-500 pl-4 space-y-6 text-xs text-slate-600 dark:text-slate-400">
         <div>
-          <span class="font-bold text-indigo-600 dark:text-indigo-400">2012</span> — <strong>AlexNet</strong>: Khởi đầu kỷ nguyên Deep Learning bùng nổ trên GPU.
+          <span class="font-bold text-indigo-600 dark:text-indigo-400">2012</span> — <strong>AlexNet</strong>: ${t('modules.frontier.timeline.alexnet')}
         </div>
         <div>
-          <span class="font-bold text-indigo-600 dark:text-indigo-400">2017</span> — <strong>Transformer (Attention Is All You Need)</strong>: Google Brain công bố kiến trúc nền móng cho toàn bộ LLM.
+          <span class="font-bold text-indigo-600 dark:text-indigo-400">2017</span> — <strong>Transformer (Attention Is All You Need)</strong>: ${t('modules.frontier.timeline.transformer')}
         </div>
         <div>
-          <span class="font-bold text-indigo-600 dark:text-indigo-400">2020</span> — <strong>GPT-3 (175B)</strong>: Chứng minh quy luật mở rộng (Scaling Laws) và năng lực In-Context Learning.
+          <span class="font-bold text-indigo-600 dark:text-indigo-400">2020</span> — <strong>GPT-3 (175B)</strong>: ${t('modules.frontier.timeline.gpt3')}
         </div>
         <div>
-          <span class="font-bold text-indigo-600 dark:text-indigo-400">2023</span> — <strong>ChatGPT & LLaMA</strong>: Làn sóng AI đại chúng và mã nguồn mở cho cộng đồng nghiên cứu toàn cầu.
+          <span class="font-bold text-indigo-600 dark:text-indigo-400">2023</span> — <strong>ChatGPT & LLaMA</strong>: ${t('modules.frontier.timeline.chatgpt')}
         </div>
         <div>
-          <span class="font-bold text-indigo-600 dark:text-indigo-400">2024-2026</span> — <strong>MoE, FlashAttention-3 & Test-Time Reasoning</strong>: Kiến trúc chuyên gia MoE thưa thớt, suy luận chuỗi tư duy (o1, DeepSeek, Gemini).
+          <span class="font-bold text-indigo-600 dark:text-indigo-400">2024-2026</span> — <strong>MoE, FlashAttention-3 & Test-Time Reasoning</strong>: ${t('modules.frontier.timeline.moeReasoning')}
         </div>
       </div>
     </div>

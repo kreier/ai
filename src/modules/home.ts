@@ -34,13 +34,13 @@ export function renderHomePage(): HTMLElement {
             🎵
           </div>
           <div>
-            <span class="text-xs font-bold uppercase tracking-wider text-amber-600 dark:text-amber-400">Featured Demo</span>
-            <h4 class="font-bold text-slate-900 dark:text-white text-sm">6-Tone Neural Sound Classifier (p5.js + ml5.js)</h4>
-            <p class="text-xs text-slate-500 dark:text-slate-400">Classifies a 400x400 grid with 1 hidden layer & 16 nodes to predict tones.</p>
+            <span class="text-xs font-bold uppercase tracking-wider text-amber-600 dark:text-amber-400">${t('featuredDemo.badge')}</span>
+            <h4 class="font-bold text-slate-900 dark:text-white text-sm">${t('featuredDemo.title')}</h4>
+            <p class="text-xs text-slate-500 dark:text-slate-400">${t('featuredDemo.description')}</p>
           </div>
         </div>
         <a href="./sound-classifier/index.html" class="px-4 py-2 rounded-lg bg-amber-600 hover:bg-amber-700 text-white text-xs font-semibold whitespace-nowrap transition">
-          Launch Demo →
+          ${t('featuredDemo.launch')}
         </a>
       </div>
     </div>

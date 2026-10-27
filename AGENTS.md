@@ -110,9 +110,9 @@ When performing tasks in this repository, follow this workflow:
 ## 6. Staged Milestones for Agents
 
 - [x] **Stage 0: Foundation & Scaffolding** (TypeScript, Tailwind, i18n scaffolding, AGENTS.md, ROADMAP.md)
-- [ ] **Stage 1: Bilingual Shell & Navigation** (Navbar, Language Switcher EN/VI, Hero, Footer, Hash Router)
-- [ ] **Stage 2: Module 1 & 2** (Foundations of AI/ML/DL/CNN/RNN + Training & Inference Loop)
-- [ ] **Stage 3: Module 3** (Transformers, Attention Q/K/V with interactive Attention Heatmap)
-- [ ] **Stage 4: Module 4 & 5** (LLMs, MoE, FlashAttention + Hardware, Bandwidth & Quantization Calculator)
-- [ ] **Stage 5: Interactive Lab & Sound Classifier** (Integration of `/public/sound-classifier/` + playground)
-- [ ] **Stage 6: Final Polish & Deployment Build** (Mobile verification, asset optimization, base path check)
+- [x] **Stage 1: Bilingual Shell & Navigation** (Navbar, Language Switcher EN/VI, Hero, Footer, Hash Router)
+- [x] **Stage 2: Module 1 & 2** (Foundations of AI/ML/DL/CNN/RNN + Training & Inference Loop)
+- [x] **Stage 3: Module 3** (Transformers, Attention Q/K/V with interactive Attention Heatmap)
+- [x] **Stage 4: Module 4 & 5** (LLMs, MoE, FlashAttention + Hardware, Bandwidth & Quantization Calculator)
+- [x] **Stage 5: Interactive Lab & Sound Classifier** (Integration of `/public/sound-classifier/` + playground)
+- [x] **Stage 6: Final Polish & Deployment Build** (Mobile verification, asset optimization, base path check)

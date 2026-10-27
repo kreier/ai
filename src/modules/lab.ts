@@ -32,7 +32,7 @@ export function renderLabPage(): HTMLElement {
       <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-6">
         <div>
           <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-500/20 text-amber-600 dark:text-amber-400 text-xs font-bold uppercase tracking-wider mb-2">
-            Project Showcase
+            ${t('modules.lab.showcaseBadge')}
           </div>
           <h2 class="text-2xl font-bold text-slate-900 dark:text-white">
             ${t('modules.lab.soundClassifierTitle')}
@@ -57,20 +57,20 @@ export function renderLabPage(): HTMLElement {
       <!-- Neural Network Specs Pill Bar -->
       <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-6 text-xs font-mono">
         <div class="p-3 bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800">
-          <span class="text-slate-400 block text-[10px] uppercase">Input Grid</span>
-          <span class="font-bold text-slate-800 dark:text-slate-100">400 × 400 (x, y)</span>
+          <span class="text-slate-400 block text-[10px] uppercase">${t('modules.lab.specs.inputGrid')}</span>
+          <span class="font-bold text-slate-800 dark:text-slate-100">${t('modules.lab.specs.gridDim')}</span>
         </div>
         <div class="p-3 bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800">
-          <span class="text-slate-400 block text-[10px] uppercase">Hidden Architecture</span>
-          <span class="font-bold text-indigo-600 dark:text-indigo-400">1 Layer, 16 Nodes</span>
+          <span class="text-slate-400 block text-[10px] uppercase">${t('modules.lab.specs.hiddenArch')}</span>
+          <span class="font-bold text-indigo-600 dark:text-indigo-400">${t('modules.lab.specs.archDetail')}</span>
         </div>
         <div class="p-3 bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800">
-          <span class="text-slate-400 block text-[10px] uppercase">Output Classes</span>
-          <span class="font-bold text-emerald-600 dark:text-emerald-400">6 Distinct Tones</span>
+          <span class="text-slate-400 block text-[10px] uppercase">${t('modules.lab.specs.outputClasses')}</span>
+          <span class="font-bold text-emerald-600 dark:text-emerald-400">${t('modules.lab.specs.tonesDetail')}</span>
         </div>
         <div class="p-3 bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800">
-          <span class="text-slate-400 block text-[10px] uppercase">Libraries</span>
-          <span class="font-bold text-amber-600 dark:text-amber-400">ml5.js + p5.js</span>
+          <span class="text-slate-400 block text-[10px] uppercase">${t('modules.lab.specs.libraries')}</span>
+          <span class="font-bold text-amber-600 dark:text-amber-400">${t('modules.lab.specs.libsDetail')}</span>
         </div>
       </div>
 

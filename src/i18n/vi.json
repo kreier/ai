@@ -24,10 +24,23 @@
     "tryLab": "Mở Phòng Thí Nghiệm",
     "existingDemoBadge": "Bao gồm Dự án ml5.js Phân Loại 6 Âm Thanh"
   },
+  "featuredDemo": {
+    "badge": "Thử Nghiệm Nổi Bật",
+    "title": "Mô Hình Phân Loại 6 Âm Thanh (p5.js + ml5.js)",
+    "description": "Phân loại lưới tọa độ 400x400 với 1 tầng ẩn gồm 16 nơ-ron để dự đoán các nốt âm thanh.",
+    "launch": "Chạy Thử Nghiệm →"
+  },
   "modules": {
     "foundations": {
       "title": "AI, ML, Học Sâu (DL), CNN và RNN là gì?",
       "shortDesc": "Hiểu rõ hệ thống phân cấp của trí tuệ nhân tạo, học máy, học sâu và các kiến trúc mạng kinh điển.",
+      "hierarchyTitle": "Sơ Đồ Phân Cấp: AI → Machine Learning → Deep Learning → LLM",
+      "aiHierarchy": "TRÍ TUỆ NHÂN TẠO (AI)",
+      "mlHierarchy": "HỌC MÁY (ML / Machine Learning)",
+      "dlHierarchy": "HỌC SÂU (DL / Mạng Nơ-ron Nhiều Tầng)",
+      "cnnLabel": "CNN (Thị giác máy tính / Ảnh)",
+      "rnnLabel": "RNN / LSTM (Dữ liệu chuỗi / Thời gian)",
+      "transformerLabel": "Transformer / LLM",
       "aiDef": "Trí tuệ nhân tạo (AI) là khái niệm bao trùm về việc máy móc có khả năng thực hiện các nhiệm vụ đòi hỏi trí thông minh của con người (suy luận, thị giác, ngôn ngữ, lập kế hoạch).",
       "mlDef": "Học máy (Machine Learning - ML) là tập con của AI, nơi hệ thống tự học các quy luật từ dữ liệu thực tế thay vì dựa vào các quy tắc lập trình cứng nhắc.",
       "dlDef": "Học sâu (Deep Learning - DL) là nhánh con của ML sử dụng các mạng nơ-ron nhân tạo nhiều tầng (tầng sâu) để tự động trích xuất các đặc trưng phân cấp phức tạp.",
@@ -48,6 +61,10 @@
       "title": "Điều Gì Khiến Mô Hình Transformer Trở Nên Đặc Biệt?",
       "shortDesc": "Lý do kiến trúc 'Attention Is All You Need' năm 2017 tạo nên cuộc cách mạng bùng nổ AI và thay thế hoàn toàn mạng RNN.",
       "parallelization": "Khả năng xử lý song song cực lớn: Khác với RNN phải đọc từng từ tuần tự, Transformer xử lý toàn bộ chuỗi văn bản cùng một lúc trong quá trình huấn luyện, tận dụng tối đa sức mạnh tính toán song song của GPU.",
+      "legacyRnn": "Mạng RNN Cũ (Tuần Tự O(N))",
+      "legacyRnnDesc": "Nút thắt tuần tự: Từ thứ t+1 phụ thuộc vào trạng thái ẩn của từ thứ t. Không thể huấn luyện song song toàn bộ văn bản trên GPU.",
+      "transformerParallel": "Mô Hình Transformer (Song Song O(1))",
+      "transformerParallelDesc": "Toàn bộ chuỗi được nạp đồng thời vào GPU. Phép tính nhân ma trận tận dụng tối đa hàng nghìn nhân Tensor Cores tính toán song song.",
       "selfAttention": "Cơ chế tự tập trung (Self-Attention): Cho phép mọi từ trong câu liên kết và đo lường mức độ liên quan ngữ cảnh với mọi từ khác một cách linh hoạt.",
       "qkv": "Query, Key và Value: Lấy cảm hứng từ hệ thống tìm kiếm thông tin. Query của một từ (thông tin cần tìm) được nhân tích vô hướng với Key của các từ khác (nhãn nội dung), chuẩn hóa qua căn bậc hai d_k, qua hàm Softmax và nhân với Value để tổng hợp ý nghĩa.",
       "positionalEncoding": "Mã hóa vị trí (Positional Encoding): Do phép tính attention không phân biệt thứ tự trước sau, vector mã hóa vị trí (hàm sin/cos hoặc RoPE hiện đại) được cộng hoặc xoay để giữ đúng trật tự câu từ."
@@ -59,7 +76,15 @@
       "tensors": "Vectơ, Ma trận & Ten-xơ: Số vô hướng là 0 chiều, vectơ là 1 chiều (nhúng token), ma trận là 2 chiều (trọng số một tầng), và ten-xơ là mảng đa chiều chứa nhiều lô chuỗi văn bản cùng lúc.",
       "moe": "Mô hình hỗn hợp chuyên gia (MoE): Thay vì kích hoạt toàn bộ hàng trăm tỷ tham số cho mỗi từ, mạng định tuyến sẽ gửi token đến đúng 2-4 mạng chuyên gia phù hợp nhất, giảm mạnh chi phí tính toán.",
       "flashAttention": "FlashAttention: Thuật toán attention thông minh tối ưu hóa theo phần cứng, chia khối tính toán trực tiếp trên bộ nhớ SRAM siêu nhanh của GPU, tránh nghẽn khi đọc/ghi bộ nhớ HBM.",
-      "emergentAbilities": "Khả năng tự xuất hiện (Emergent Abilities): Những năng lực nhảy vọt (suy luận nhiều bước, lập trình, lý thuyết tâm trí) bất ngờ xuất hiện khi quy mô tham số và lượng dữ liệu vượt qua một ngưỡng tới hạn."
+      "emergentAbilities": "Khả năng tự xuất hiện (Emergent Abilities): Những năng lực nhảy vọt (suy luận nhiều bước, lập trình, lý thuyết tâm trí) bất ngờ xuất hiện khi quy mô tham số và lượng dữ liệu vượt qua một ngưỡng tới hạn.",
+      "timelineTitle": "Dòng Thời Gian Tiến Hóa AI Hiện Đại",
+      "timeline": {
+        "alexnet": "Khởi đầu kỷ nguyên Deep Learning bùng nổ được tăng tốc trên GPU.",
+        "transformer": "Google Brain công bố kiến trúc nền móng cho toàn bộ các mô hình LLM hiện đại.",
+        "gpt3": "Chứng minh quy luật mở rộng (Scaling Laws) và năng lực học trong ngữ cảnh (In-Context Learning).",
+        "chatgpt": "Bước ngoặt đưa AI tạo sinh đến đại chúng cùng làn sóng mô hình trọng số mở cho cộng đồng toàn cầu.",
+        "moeReasoning": "Kiến trúc hỗn hợp chuyên gia thưa thớt (MoE), tối ưu phần cứng FlashAttention-3 và suy luận chuỗi tư duy (o1, DeepSeek, Gemini)."
+      }
     },
     "hardware": {
       "title": "Nút Thắt Phần Cứng, Edge AI & Lượng Tử Hóa (Quantization)",
@@ -80,12 +105,23 @@
     "lab": {
       "title": "Phòng Thí Nghiệm & Thử Nghiệm Tương Tác",
       "shortDesc": "Các công cụ tính toán trực tiếp, mô phỏng token và thử nghiệm mạng nơ-ron phân loại 6 âm thanh p5.js có sẵn.",
+      "showcaseBadge": "Dự Án Tiêu Biểu",
       "soundClassifierTitle": "🎵 Mô Hình Phân Loại 6 Âm Thanh (p5.js + ml5.js)",
       "soundClassifierDesc": "Thử nghiệm học máy có sẵn trong dự án: huấn luyện mạng nơ-ron với 1 tầng ẩn gồm 16 nơ-ron để ánh xạ tọa độ lưới 400x400 thành 6 nốt âm thanh đặc trưng.",
       "launchSoundClassifier": "Mở Bản Toàn Màn Hình",
       "embeddedFrame": "Khung Thử Nghiệm Trực Tiếp",
       "calculatorTitle": "⚡ Công Cụ Ước Tính Phần Cứng & Tốc Độ LLM",
-      "calcDescription": "Tính toán dung lượng VRAM cần thiết và tốc độ sinh token lý thuyết dựa trên thông số mô hình và băng thông phần cứng của bạn."
+      "calcDescription": "Tính toán dung lượng VRAM cần thiết và tốc độ sinh token lý thuyết dựa trên thông số mô hình và băng thông phần cứng của bạn.",
+      "specs": {
+        "inputGrid": "Lưới Đầu Vào",
+        "gridDim": "400 × 400 (x, y)",
+        "hiddenArch": "Kiến Trúc Tầng Ẩn",
+        "archDetail": "1 Tầng Ẩn, 16 Nơ-ron",
+        "outputClasses": "Phân Lớp Đầu Ra",
+        "tonesDetail": "6 Nốt Âm Thanh",
+        "libraries": "Thư Viện",
+        "libsDetail": "ml5.js + p5.js"
+      }
     }
   },
   "calc": {

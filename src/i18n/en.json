@@ -24,10 +24,23 @@
     "tryLab": "Open Interactive Lab",
     "existingDemoBadge": "Includes ml5.js 6-Tone Sound Classifier"
   },
+  "featuredDemo": {
+    "badge": "Featured Demo",
+    "title": "6-Tone Neural Sound Classifier (p5.js + ml5.js)",
+    "description": "Classifies a 400x400 grid with 1 hidden layer & 16 nodes to predict tones.",
+    "launch": "Launch Demo →"
+  },
   "modules": {
     "foundations": {
       "title": "What is AI, ML, DL, CNN, and RNN?",
       "shortDesc": "Understand the hierarchy of artificial intelligence, machine learning, deep learning, and classic architectures.",
+      "hierarchyTitle": "The Hierarchy: AI → Machine Learning → Deep Learning → LLM",
+      "aiHierarchy": "ARTIFICIAL INTELLIGENCE (AI)",
+      "mlHierarchy": "MACHINE LEARNING (ML)",
+      "dlHierarchy": "DEEP LEARNING (DL / Multi-Layer Neural Networks)",
+      "cnnLabel": "CNN (Vision / Images)",
+      "rnnLabel": "RNN / LSTM (Sequences)",
+      "transformerLabel": "Transformer / LLM",
       "aiDef": "Artificial Intelligence (AI) is the broad umbrella concept of machines performing tasks that typically require human cognition (reasoning, perception, language, planning).",
       "mlDef": "Machine Learning (ML) is a subset of AI where systems learn patterns from empirical data rather than relying on explicit hand-crafted rules.",
       "dlDef": "Deep Learning (DL) is a subset of ML utilizing artificial neural networks with multiple stacked layers (deep representations) to extract hierarchical features.",
@@ -48,6 +61,10 @@
       "title": "What Makes the Transformer Special?",
       "shortDesc": "Why the 2017 'Attention Is All You Need' architecture revolutionized AI and replaced RNNs completely.",
       "parallelization": "Massive Parallelism: Unlike RNNs that must process token-by-token sequentially, Transformers process entire sequences simultaneously during training, unlocking massive GPU scaling.",
+      "legacyRnn": "Legacy RNN (Sequential O(N))",
+      "legacyRnnDesc": "Sequential bottleneck: Token t+1 depends on state from token t. Impossible to parallelize on GPUs.",
+      "transformerParallel": "Transformer Architecture (Parallel O(1))",
+      "transformerParallelDesc": "All tokens ingested at once. Computation is framed as large matrix GEMMs running simultaneously across GPU cores.",
       "selfAttention": "Self-Attention Mechanism: Allows every token in a sentence to attend to every other token, calculating contextual relevance dynamically.",
       "qkv": "Query, Key, and Value: Inspired by information retrieval. A token's Query (what it looks for) is compared via dot-product with every other token's Key (what it contains), scaled by sqrt(d_k), passed through Softmax to produce weights, and multiplied by the Values.",
       "positionalEncoding": "Positional Encoding: Since attention is permutation-invariant, positional encodings (sinusoids or modern Rotary Position Embeddings / RoPE) inject sequence order into the vectors."
@@ -59,7 +76,15 @@
       "tensors": "Vectors, Matrices & Tensors: A scalar is 0D, a vector is 1D (token embedding), a matrix is 2D (layer weights), and a tensor is an N-dimensional array holding batches of sequences.",
       "moe": "Mixture of Experts (MoE): Instead of activating all parameters for every token, a gating network selectively routes each token to top-K expert networks (e.g., activating only 2 out of 8 experts), slashing compute costs while preserving capacity.",
       "flashAttention": "FlashAttention: An exact, hardware-aware attention algorithm that tiles computation across fast on-chip GPU SRAM, avoiding slow High Bandwidth Memory (HBM) read/writes.",
-      "emergentAbilities": "Emergent Abilities: Qualitative jumps in capability (multi-step reasoning, coding, theory of mind) that appear as models scale across compute, parameters, and dataset tokens."
+      "emergentAbilities": "Emergent Abilities: Qualitative jumps in capability (multi-step reasoning, coding, theory of mind) that appear as models scale across compute, parameters, and dataset tokens.",
+      "timelineTitle": "Modern AI Evolution Timeline",
+      "timeline": {
+        "alexnet": "Dawn of the modern Deep Learning revolution accelerated by GPUs.",
+        "transformer": "Google Brain publishes the foundational architecture underpinning all modern LLMs.",
+        "gpt3": "Demonstrates Scaling Laws and emergent In-Context Learning capabilities without fine-tuning.",
+        "chatgpt": "The generative AI inflection point bringing LLMs to the mainstream alongside foundational open-weights models.",
+        "moeReasoning": "Sparse Mixture of Experts architectures, hardware-aware FlashAttention-3, and test-time chain-of-thought reasoning (o1, DeepSeek, Gemini)."
+      }
     },
     "hardware": {
       "title": "Hardware Bottlenecks, Edge AI & Quantization",
@@ -80,12 +105,23 @@
     "lab": {
       "title": "Interactive Lab & Experiments",
       "shortDesc": "Hands-on calculators, tokenizers, and the existing p5.js 6-tone neural network classifier.",
+      "showcaseBadge": "Project Showcase",
       "soundClassifierTitle": "🎵 6-Tone Sound Classifier (p5.js + ml5.js)",
       "soundClassifierDesc": "Our included machine learning experiment: trains a neural network with 1 hidden layer and 16 nodes to map a 400x400 2D coordinate grid to 6 distinct audio tones.",
       "launchSoundClassifier": "Launch Fullscreen Classifier",
       "embeddedFrame": "Embedded Live Sandbox",
       "calculatorTitle": "⚡ LLM Hardware & Speed Calculator",
-      "calcDescription": "Calculate whether a model fits in your VRAM and estimate token generation speed based on your memory bandwidth."
+      "calcDescription": "Calculate whether a model fits in your VRAM and estimate token generation speed based on your memory bandwidth.",
+      "specs": {
+        "inputGrid": "Input Grid",
+        "gridDim": "400 × 400 (x, y)",
+        "hiddenArch": "Hidden Architecture",
+        "archDetail": "1 Layer, 16 Nodes",
+        "outputClasses": "Output Classes",
+        "tonesDetail": "6 Distinct Tones",
+        "libraries": "Libraries",
+        "libsDetail": "ml5.js + p5.js"
+      }
     }
   },
   "calc": {

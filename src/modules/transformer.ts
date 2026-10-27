@@ -33,12 +33,12 @@ export function renderTransformerPage(): HTMLElement {
         </p>
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs">
           <div class="p-3 rounded-xl bg-rose-50 dark:bg-rose-950/30 border border-rose-200 dark:border-rose-900/60">
-            <strong class="text-rose-700 dark:text-rose-400 block mb-1">Mạng RNN Cũ (Tuần Tự O(N))</strong>
-            ${isVi ? 'Phải đợi từ thứ 1 xử lý xong mới chuyển sang từ thứ 2. Không thể huấn luyện song song toàn bộ văn bản trên GPU.' : 'Sequential bottleneck: Token t+1 depends on state from token t. Impossible to parallelize on GPUs.'}
+            <strong class="text-rose-700 dark:text-rose-400 block mb-1">${t('modules.transformer.legacyRnn')}</strong>
+            ${t('modules.transformer.legacyRnnDesc')}
           </div>
           <div class="p-3 rounded-xl bg-emerald-50 dark:bg-emerald-950/30 border border-emerald-200 dark:border-emerald-900/60">
-            <strong class="text-emerald-700 dark:text-emerald-400 block mb-1">Mô Hình Transformer (Song Song O(1))</strong>
-            ${isVi ? 'Toàn bộ chuỗi được nạp đồng thời vào GPU. Phép tính nhân ma trận tận dụng tối đa hàng nghìn nhân Tensor Cores.' : 'All tokens ingested at once. Computation is framed as large matrix GEMMs running simultaneously across GPU cores.'}
+            <strong class="text-emerald-700 dark:text-emerald-400 block mb-1">${t('modules.transformer.transformerParallel')}</strong>
+            ${t('modules.transformer.transformerParallelDesc')}
           </div>
         </div>
       </section>

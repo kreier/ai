@@ -23,29 +23,29 @@ export function renderFoundationsPage(): HTMLElement {
     <!-- AI/ML/DL Hierarchy Diagram -->
     <div class="p-6 mb-10 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm">
       <h3 class="text-sm font-bold uppercase tracking-wider text-slate-500 mb-4">
-        ${isVi ? 'Sơ Đồ Phân Cấp: AI → Machine Learning → Deep Learning → LLM' : 'The Hierarchy: AI → Machine Learning → Deep Learning → LLM'}
+        ${t('modules.foundations.hierarchyTitle')}
       </h3>
       <div class="relative p-6 rounded-xl border border-indigo-200 dark:border-indigo-900/60 bg-indigo-50/30 dark:bg-indigo-950/20 text-center">
         <span class="text-xs font-extrabold text-indigo-700 dark:text-indigo-300 block mb-2">
-          ARTIFICIAL INTELLIGENCE (AI / Trí Tuệ Nhân Tạo)
+          ${t('modules.foundations.aiHierarchy')}
         </span>
         <div class="p-5 rounded-xl border border-blue-200 dark:border-blue-900/60 bg-blue-50/40 dark:bg-blue-950/30">
           <span class="text-xs font-extrabold text-blue-700 dark:text-blue-300 block mb-2">
-            MACHINE LEARNING (ML / Học Máy)
+            ${t('modules.foundations.mlHierarchy')}
           </span>
           <div class="p-4 rounded-xl border border-purple-200 dark:border-purple-900/60 bg-purple-50/50 dark:bg-purple-950/40">
             <span class="text-xs font-extrabold text-purple-700 dark:text-purple-300 block mb-2">
-              DEEP LEARNING (DL / Mạng Nơ-ron Nhiều Tầng)
+              ${t('modules.foundations.dlHierarchy')}
             </span>
             <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 mt-3">
               <div class="p-2.5 rounded-lg bg-white dark:bg-slate-900 border border-purple-200 dark:border-purple-800 text-xs font-semibold text-purple-900 dark:text-purple-200">
-                CNN (Thị giác / Ảnh)
+                ${t('modules.foundations.cnnLabel')}
               </div>
               <div class="p-2.5 rounded-lg bg-white dark:bg-slate-900 border border-purple-200 dark:border-purple-800 text-xs font-semibold text-purple-900 dark:text-purple-200">
-                RNN / LSTM (Chuỗi)
+                ${t('modules.foundations.rnnLabel')}
               </div>
               <div class="p-2.5 rounded-lg bg-indigo-600 text-white font-bold text-xs shadow-xs">
-                Transformer / LLM
+                ${t('modules.foundations.transformerLabel')}
               </div>
             </div>
           </div>

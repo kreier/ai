@@ -1,4 +1,5 @@
-import { t, getLanguage, setLanguage, SupportedLanguage } from '../i18n';
+import { t, getLanguage, setLanguage } from '../i18n';
+import { APP_VERSION } from '../version';
 
 export function createNavbar(onNavigate: (route: string) => void): HTMLElement {
   const nav = document.createElement('header');
@@ -20,6 +21,9 @@ export function createNavbar(onNavigate: (route: string) => void): HTMLElement {
             ${t('site.title')}
             <span class="text-[10px] font-semibold uppercase tracking-wider px-1.5 py-0.5 rounded-md bg-indigo-100 dark:bg-indigo-900/40 text-indigo-700 dark:text-indigo-300">
               Interactive
+            </span>
+            <span class="text-[10px] font-mono font-medium px-1.5 py-0.5 rounded-md bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 border border-slate-200 dark:border-slate-700">
+              v${APP_VERSION}
             </span>
           </span>
         </div>

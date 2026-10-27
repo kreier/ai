@@ -1,5 +1,8 @@
 # AI Explorer (Trí Tuệ Nhân Tạo) ⚡
 
+[![Version](https://img.shields.io/badge/version-v0.1.0-blue.svg)](file:///home/mk/AI-Agents/antigravity/ai/CHANGELOG.md)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
+
 An interactive, bilingual (English & Vietnamese) educational platform exploring modern Artificial Intelligence from first principles to cutting-edge LLMs, Transformer architectures, and edge hardware bottlenecks.
 
 Published live at: **[https://kreier.github.io/ai/](https://kreier.github.io/ai/)**
@@ -67,3 +70,4 @@ npm run preview
 For AI coding agents and contributors:
 - Read [AGENTS.md](file:///home/mk/AI-Agents/antigravity/ai/AGENTS.md) for strict architectural rules, bilingual translation standards, and widget specifications.
 - Check [ROADMAP.md](file:///home/mk/AI-Agents/antigravity/ai/ROADMAP.md) for milestone tracking and future development phases.
+- Review [CHANGELOG.md](file:///home/mk/AI-Agents/antigravity/ai/CHANGELOG.md) for version release history and release notes.

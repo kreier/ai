@@ -1,4 +1,5 @@
 import { t } from '../i18n';
+import { APP_VERSION } from '../version';
 
 export function createFooter(): HTMLElement {
   const footer = document.createElement('footer');
@@ -8,6 +9,7 @@ export function createFooter(): HTMLElement {
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-4">
       <div class="flex items-center gap-2">
         <span class="font-bold text-slate-900 dark:text-white">${t('site.title')}</span>
+        <span class="text-[10px] font-mono px-1.5 py-0.5 rounded bg-slate-100 dark:bg-slate-800 text-slate-500 dark:text-slate-400 border border-slate-200 dark:border-slate-700">v${APP_VERSION}</span>
         <span>•</span>
         <span>${t('site.footerText')}</span>
       </div>
